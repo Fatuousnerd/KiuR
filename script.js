@@ -20,3 +20,8 @@ wrapper.addEventListener("keypress", (e) => {
         wrapper.classList.add("active");
     }
 })
+
+
+for(i < 0, 1++ ){
+    console.log(i)
+}

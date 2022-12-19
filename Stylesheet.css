@@ -1,19 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins' sans-serif;
+    font-family: 'Unbounded', cursive;
 }
 body{
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #4B0082;
+    background: url(https://source.unsplash.com/random/1400x1400/?nature,water,mammals);
+    background-repeat: no-repeat;
 }
 .wrapper{
-    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
     max-width: 410px;
     border-radius: 10px;
     padding: 16px 25px 0;
@@ -26,6 +28,7 @@ body{
 header h1{
     font-size: 21px;
     font-weight: 500px;
+    text-align: center;
 }
 header p{
     font-size: 16px;
@@ -48,7 +51,8 @@ header p{
     padding: 0 17px;
 }
 .form button{
-    background: #4B0082;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
     margin-top: 20px;
     font-size: 17px;
     cursor: pointer;
