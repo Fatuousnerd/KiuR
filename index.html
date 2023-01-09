@@ -11,17 +11,25 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>
-            <h1>Qr Code Generator</h1>
-            <p>Paste text or url to generate a code</p>
-        </header>
-        <div class="form">
-            <input type="text" placeholder="Paste text or url here">
-            <button>Generate QR Code</button>
+        <button>Code Gen</button>
+        <button>Code Reader</button>
+        <!--Code Gen-->
+        <div class="codegen">
+            <header>
+                <h1>Qr Code Generator</h1>
+                <p>Paste text or url to generate a code</p>
+            </header>
+            <div class="form">
+                <input type="text" placeholder="Paste text or url here">
+                <button>Generate QR Code</button>
+            </div>
+            <div class="qr-code">
+                <img alt="qr-code">
+            </div>
         </div>
-        <div class="qr-code">
-            <img alt="qr-code">
-        </div>
+        
+        <!--Code Reader-->
+        <div class="codereader"></div>
     </div>
     
     <script src="script.js"></script>
