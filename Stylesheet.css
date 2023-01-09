@@ -82,6 +82,11 @@ header p{
     border-radius: 5px;
     color: #000;
     cursor: pointer;
+    transition: .5s ease;
+}
+#cdgn:hover, #cdrd:hover{
+    background: rgba(255, 255, 255, 0.8);
+    border: .8px solid rgba(0, 0, 0, 0.8);
 }
 .codegen{
     position: absolute;
