@@ -75,9 +75,9 @@ header p{
 }
 #cdgn, #cdrd{
     width: calc(100% / 2 - 10px);
-    height: auto;
+    height: 20px;
     background: rgba(255, 255, 255, 0.5);
     border: .5px solid rgba(0, 0, 0, 0.4);
     border-radius: 5px;
-    color: #ccc;
+    color: #000;
 }
