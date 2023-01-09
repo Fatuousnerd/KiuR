@@ -23,7 +23,7 @@ wrapper.addEventListener("keypress", (e) => {
     }
 })
 
-const wrapper = document.querySelector(".wrapper"),
+//const wrapper = document.querySelector(".wrapper"),
 form = wrapper.querySelector("form"),
 fileInp = form.querySelector("input"),
 infoText = form.querySelector('p'),
