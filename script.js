@@ -24,7 +24,7 @@ wrapper.addEventListener("keypress", (e) => {
 })
 
 //const wrapper = document.querySelector(".wrapper"),
-form = wrapper.querySelector("form"),
+const form = wrapper.querySelector("form"),
 fileInp = form.querySelector("input"),
 infoText = form.querySelector('p'),
 copyBtn = wrapper.querySelector('.copy'),
