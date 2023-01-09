@@ -90,6 +90,7 @@ header p{
 }
 .codegen{
     position: absolute;
+    display: block;
 }
 .codereader {
     background: rgba(255, 255, 255, 0.2);
@@ -99,6 +100,7 @@ header p{
     padding: 30px 30px 35px;
     transition: height 0.2s ease;
     position: absolute;
+    display: none;
 }
 .codereader .active{
     height: 525px;
@@ -128,9 +130,9 @@ form img{
 .codereader .active form .content{
     display: none;
 }
-form .content{
-    /*display: none;*/
-}
+/*form .content{
+    display: none;
+}*/
 form .content i{
     color: #424242;
     font-size: 55px;
