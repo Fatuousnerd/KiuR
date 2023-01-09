@@ -22,6 +22,6 @@ wrapper.addEventListener("keypress", (e) => {
 })
 
 
-for(i < 0, 1++ ){
+/*for(i < 0, 1++ ){
     console.log(i)
-}
+}*/
