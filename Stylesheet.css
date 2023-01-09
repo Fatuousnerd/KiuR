@@ -19,7 +19,7 @@ body{
     backdrop-filter: blur(10px);
     max-width: 410px;
     border-radius: 10px;
-    padding: 16px 25px 0;
+    padding: 16px 25px;
     height: 260px;
     transform: height 0.2s ease;
     min-width: 400px;
