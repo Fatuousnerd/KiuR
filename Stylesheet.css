@@ -83,6 +83,9 @@ header p{
     color: #000;
     cursor: pointer;
 }
+.codegen{
+    position: absolute;
+}
 .codereader {
     background: rgba(255, 255, 255, 0.2);
     width: 420px;
