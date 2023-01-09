@@ -74,6 +74,7 @@ cdgn.onclick = () => {
     if(codegen.style.display == 'none'){
         codegen.style.display == 'block'
         codereader.style.display == 'none'
+        console.log("cdgen");
     }
 };
 
@@ -81,5 +82,6 @@ cdrd.onclick = () => {
     if(codereader.style.display == 'none'){
         codereader.style.display == 'block'
         codegen.style.display == 'none'
+        console.log("cdrd");
     }
 };
