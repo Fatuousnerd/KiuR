@@ -2,6 +2,8 @@ const wrapper = document.querySelector('.wrapper'),
 generatebtn = wrapper.querySelector('.form button'),
 qrInput = wrapper.querySelector('.form input'),
 qrImg = wrapper.querySelector('.qr-code img'),
+codegen = wrapper.querySelector('.codegen'),
+codereader = wrapper.querySelector('.codereader'),
 cdgn = document.getElementById('cdgn'),
 cdrd = document.getElementById('cdrd');
 
@@ -67,3 +69,17 @@ form.addEventListener('click', () => fileInp.click());
 /*for(i < 0, 1++ ){
     console.log(i)
 }*/
+
+cdgn.onclick = () => {
+    if(codegen.style.display == 'none'){
+        codegen.style.display == 'block'
+        codereader.style.display == 'none'
+    }
+};
+
+cdrd.onclick = () => {
+    if(codereader.style.display == 'none'){
+        codereader.style.display == 'block'
+        codegen.style.display == 'none'
+    }
+};
