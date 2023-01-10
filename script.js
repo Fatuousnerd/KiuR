@@ -5,6 +5,7 @@ qrImg = wrapper.querySelector('.qr-code img'),
 codegen = wrapper.querySelector('.codegen'),
 codereader = wrapper.querySelector('.codereader'),
 cdgn = document.getElementById('cdgn'),
+clicked = document.getElementById('clicked'),
 cdrd = document.getElementById('cdrd');
 
 generatebtn.addEventListener('click', () => {
@@ -85,3 +86,7 @@ cdrd.addEventListener('click', () => {
         console.log("cdrd");
     }
 });
+
+clicked.onclick = () => {
+    console.log("Clicked123")
+}
