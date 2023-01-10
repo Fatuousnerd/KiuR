@@ -91,7 +91,7 @@ header p{
 }
 .codegen{
     position: absolute;
-    display: block;
+    display: none;
 }
 .codereader {
     background: rgba(255, 255, 255, 0.2);
@@ -101,7 +101,7 @@ header p{
     padding: 30px 30px 35px;
     transition: height 0.2s ease;
     position: absolute;
-    display: none;
+    display: block;
 }
 .codereader .active{
     height: 525px;
