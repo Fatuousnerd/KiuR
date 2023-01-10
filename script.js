@@ -88,5 +88,11 @@ cdrd.addEventListener('click', () => {
 });
 
 clicked.onclick = () => {
-    console.log("Clicked123")
+    if(codegen.style.display == 'none'){
+        codegen.style.display == 'block'
+        codereader.style.display == 'none'
+    } else if(codegen.style.display == 'block'){
+        codegen.style.display == 'none'
+        codereader.style.display == 'block'
+    }
 }
