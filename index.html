@@ -11,7 +11,7 @@
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <input type="button" id="clicked" value="click"/>
+    <!--<input type="button" id="clicked" value="click"/>-->
     <div class="wrapper">
         <input type="button" id="cdgn" value="Code Gen"/>
         <input type="button" id="cdrd" value="Code Reader"/>
@@ -31,10 +31,12 @@
         </div>
         
         <!--Code Reader-->
-        <div class="codereader">
+        <div class="codereader none">
             <form action="#">
                 <input type="file" hidden >
-                <img src="" alt="qr-code">
+                <div class="qr">
+                    <img src="" alt="qr-code">
+                </div>
                 <div class="content">
                     <i class="material-symbols-outlined">cloud_upload</i>
                     <p>Upload Qr Code to scan</p>

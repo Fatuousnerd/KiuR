@@ -33,66 +33,57 @@ infoText = form.querySelector('p'),
 copyBtn = wrapper.querySelector('.copy'),
 closeBtn = wrapper.querySelector('.close');
 
-function fetchRequest(formData, file){
-    infoText.innerText = "Scanning Qr Code.......";
-    fetch(' https://api.qrserver.com/v1/create-qr-code/?', {
-        method: "POST" , body: formData
+function fetchRequest(file, formData) {
+    infoText.innerText = "Scanning QR Code...";
+    fetch("http://api.qrserver.com/v1/read-qr-code/", {
+        method: 'POST', body: formData
     }).then(res => res.json()).then(result => {
         result = result[0].symbol[0].data;
-        console.log(result);
-        infoText.innerText = result ? "Upload Qr Code to scan" : "Could not scan Qr Code";
+        infoText.innerText = result ? "Upload QR Code to Scan" : "Couldn't scan QR Code";
         if(!result) return;
-        wrapper.querySelector('textarea').innerText = result;
-        form.querySelector('img').src = URL.createObjectURL(file);
+        document.querySelector("textarea").innerText = result;
+        form.querySelector("img").src = URL.createObjectURL(file);
         wrapper.classList.add("active");
     }).catch(() => {
-        infoText.innerText = "Could not scan Qr Code";
+        infoText.innerText = "Couldn't scan QR Code";
     });
 }
-
-fileInp.addEventListener('change', e => {
+fileInp.addEventListener("change", async e => {
     let file = e.target.files[0];
     if(!file) return;
     let formData = new FormData();
-    formData.append('file', file)
-    fetchRequest(formData, file);
-})
-
-copyBtn.addEventListener('click', () => {
-    let text = wrapper.querySelector('textarea').textContent;
-    navigator.clipboard.writeText(text)
-})
-
-closeBtn.addEventListener('click', () =>  wrapper.classList.remove("active"))
-
-form.addEventListener('click', () => fileInp.click());
+    formData.append('file', file);
+    fetchRequest(file, formData);
+});
+copyBtn.addEventListener("click", () => {
+    let text = document.querySelector("textarea").textContent;
+    navigator.clipboard.writeText(text);
+});
+form.addEventListener("click", () => fileInp.click());
+closeBtn.addEventListener("click", () => wrapper.classList.remove("active"));
 
 /*for(i < 0, 1++ ){
     console.log(i)
 }*/
 
-cdgn.addEventListener('click', () => {
-    if(codegen.style.display == 'none'){
-        codegen.style.display == 'block'
-        codereader.style.display == 'none'
-        console.log("cdgen");
-    }
+cdgn.addEventListener("click", () => {
+    codegen.classList.remove('none')
+    wrapper.classList.remove('rd')
+    codereader.classList.add('none')
 });
 
-cdrd.addEventListener('click', () => {
-    if(codereader.style.display == 'none'){
-        codereader.style.display == 'block'
-        codegen.style.display == 'none'
-        console.log("cdrd");
-    }
+cdrd.addEventListener("click", () => {
+    codegen.classList.add('none')
+    wrapper.classList.add('rd')
+    codereader.classList.remove('none')
 });
 
-clicked.onclick = () => {
-    if(codegen.style.display == 'none'){
-        codegen.style.display == 'block'
-        codereader.style.display == 'none'
-    } else if(codegen.style.display == 'block'){
-        codegen.style.display == 'none'
-        codereader.style.display == 'block'
+/*clicked.onclick = () => {
+    if(codegen.style.visibilty == 'hidden'){
+        codegen.style.visibilty == 'visible'
+        codereader.style.visibilty == 'hidden'
+    } else if(codegen.style.visibilty == 'visible'){
+        codegen.style.visibilty == 'hidden'
+        codereader.style.visibilty == 'visible'
     }
-}
+}*/
