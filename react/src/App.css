@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --MainBgColorLight: #f0f8ff;
+  --MainTextColorLight: #0A0A0A;
+  --SecBgColorLight: #F0F0F0;
+  --SecTextColorLight: #555555;
+  --HTextColorLight: #7A33FF;
+  --GlassColorLight: rgba(0, 0, 0, .5);
+
+  --DarkBgColor: #0A0A0A;
+  --DarkTextColor: #F8FFFF;
+  --SecDarkBgColor: #1C1C1C;
+  --SecDarkTextColor: #CCCCCC;
+  --HDarkTextColor: #A259FF;
+  --GlassColor: rgba(255, 255, 255,.5);
+}
+
+
+body.light {
+  --MainBg: var(--MainBgColorLight);
+  --MainText: var(--MainTextColorLight);
+  --SecBg: var(--SecBgColorLight);
+  --SecText: var(--MainTextColorLight);
+  --HText: var(--HTextColorLight);
+  --Glass: var(--GlassColorLight);
+}
+
+body.dark {
+  --MainBg: var(--DarkBgColor);
+  --MainText: var(--DarkTextColor);
+  --SecBg: var(--SecDarkBgColor);
+  --SecText: var(--SecDarkTextColor);
+  --HText: var(--HDarkTextColor);
+  --Glass: var(--GlassColor);
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+* {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Unbounded', cursive;
+  letter-spacing: .1rem;
+}
+
+body {
+  background: var(--MainBg);
+  color: var(--MainText);
+  min-height: 100vh;
+  transition: all ease-in-out .5s;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+li {
+  list-style: none;
+
+}
+
+li>a:hover {
+  color: var(--HText);
+  transform: scale(1.25);
+  transition: all ease-out .25s;
+}
+
+button {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+span {
+  color: var(--HText);
+}

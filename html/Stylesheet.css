@@ -11,7 +11,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: url(https://source.unsplash.com/random/1950x1950/?nature,dark);
+    background: #292929;
     background-repeat: no-repeat;
 }
 .wrapper{
